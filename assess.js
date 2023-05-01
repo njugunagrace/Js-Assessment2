@@ -51,5 +51,18 @@ function checkoutBook(title) {
   }
 checkoutBook("Great expectations");
 
+// Create a function returnBook that takes a book title as an argument and changes the
+// book's isAvailable property to true. If the book is not found in the library, the function
+// should return a message indicating that the book does not belong to the library.
+function returnBook(title) {
+    let bookInd = books.findIndex(book => book.title === title);
+    if (bookInd !== -1) {
+      books[bookInd].isAvailable = true;
+    } else {
+      console.log("Not in the library");
+    }
+  }
+  returnBook("The Great Gatsby");
+
 
   
